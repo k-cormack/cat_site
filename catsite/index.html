@@ -12,6 +12,35 @@
 </head>
 
 <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" id="cat-buttons">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="assets/cat.jpg" id="cat-img" alt="cat number one">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col=md-6">
+                <h4>Name:
+                    <span id="name">_</span>
+                </h4>
+                <h4>Mood:
+                    <span id="mood">_</span>
+                </h4>
+                <h4>Pets:
+                    <span id="pets">_</span>
+                </h4>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-success" onclick="pet()">Pet</button>
+                <button class="btn btn-primary" onclick="reset()" id="pet-button">Reset</button>
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
