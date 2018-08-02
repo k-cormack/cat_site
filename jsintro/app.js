@@ -287,11 +287,54 @@
     // 
 // }return cities[boise]
 
+//---------------------------------------------------------------------------
 
-function makeTime(num) {
-    var hours = Math.floor(num/60)
-    var min = num % 60  // or num - (hours * 60))
-    return hours + ':' + min
+// function makeTime(num) {
+//     var hours = Math.floor(num/60)
+//     var min = num % 60  // or num - (hours * 60))
+//     return hours + ':' + min
+// }
+
+// console.log(makeTime(433))
+
+//--------------------------------------------------------------------------------
+let students = [{
+    name: 'Mike',
+    formal: 'Mr.',
+    id: 1687513
+},{
+    name: 'Chris',
+    formal: 'Sir',
+    id: 168132
+},{
+    name: 'Keith',
+    formal: 'Captain',
+    id: 15781
+}]
+ 
+for(let i=0; i < students.length; i++){
+   // Initialization; Condition; Increment;
+    let student = students[i]
+    document.getElementById('names').innerHTML += `<button onclick="globals.greet('${student.name}')">${student.name}</button>`
+}  
+ 
+globals.greet = function greet(name){
+    let student = students.find(s  => s.name == name)
+     document.getElementById('greet').innerText = `Hello ${student.formal} ${student.name}` 
 }
 
-console.log(makeTime(433))
+
+function findStudent(key, value){
+    for(let i=0; i < students.length; i++){
+        let student = students[i];
+        let studentProp = student[key]
+        if(studentProp==value){
+            return student
+        }
+    }
+}
+
+
+findStudent('id', 15781)
+
+//----------------------------------------------------------------------------
