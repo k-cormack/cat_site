@@ -48,7 +48,7 @@ function draw() {
     mood.innerText = activeCat.moods[activeCat.moodIndex]
     pets.innerText = activeCat.pets.toString()
     if(activeCat.pets >= activeCat.tolerance * 2) {
-        petButton.setAttribute.disabled = false;
+       document.getElementById("pet-button").disabled = true;
     }
 }
 
@@ -63,7 +63,7 @@ function pet() {
 function reset() {
     activeCat.pets = 0
     activeCat.moodIndex = 0
-    petButton.setAttribute.disabled = false
+    document.getElementById("pet-button").disabled = false;
     draw()
 }
 
@@ -84,6 +84,8 @@ function setActiveCat(catIndex) {
 
     draw()
 }
+
+
 
 drawButtons()
 
